@@ -1,0 +1,145 @@
+address {
+    font-style: normal;
+}
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: $footer-background;
+}
+
+.footer-position {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-address {
+    margin-top: 20px;
+}
+
+.footer-address__item:not(:first-child) {
+    margin-top: 9px;
+}
+
+.footer-address__location {
+    color: $footer-address-color;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.footer-address__contact {
+    color: $footer-contacts-color;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+// Підписки на соцмережі //
+.footer-socials {
+    margin-left: 70px;
+}
+
+.footer-socials__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $footer-titles;
+}
+
+.footer-socials__list {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer-socials__item:not(:first-child) {
+    margin-left: 10px;
+}
+
+.footer-socials__item {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $footer-socies-logo-background;
+}
+
+.footer-socials__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color $const-transition-duration $const-transition-timing-function;
+        &:hover,
+        &:focus {
+            background-color: $accent-color;
+        }
+}
+
+.footer-socials__logo {
+    fill: $footer-socies-logo-color;
+}
+
+// Підписка на телеграм //
+
+.footer-subscription {
+    margin-left: 93px;
+}
+
+.footer-subscription__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $footer-titles;
+    margin-bottom: 20px;
+}
+
+.subscription-form__meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscription-form__input {
+    padding: 15px 16px;
+    margin-right: 12px;
+
+    width: 358px;
+    height: 50px;
+
+    color: $input-footer;
+    background-color: $footer-background;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+
+.subscription-form__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 50px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+
+    color: $buttons-text-color;
+    background-color: $button-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.subscription-form__icon {
+    margin-left: 10px;
+}

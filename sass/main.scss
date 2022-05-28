@@ -1,0 +1,15 @@
+//Базові файли//
+@import './utils/vars';
+@import './utils/default';
+@import './components/main-logo';
+@import './components/page-header';
+//Контент сторінки//
+@import './components/main-hero';
+@import './components/main-features';
+@import './components/main-production';
+@import './components/main-workers';
+@import './components/main-clients';
+//ПІДВАЛ//
+@import './components/page-footer';
+//Модальне вікно//
+@import './components/modal';

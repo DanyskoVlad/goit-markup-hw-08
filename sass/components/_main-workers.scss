@@ -1,0 +1,106 @@
+.workers {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: $second-main-color;
+    margin: 0 auto;
+}
+
+.workers__list {
+    display: flex;
+}
+
+.workers__title {
+    margin: 0 auto 50px;
+
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.work-details__title {
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.workers__item:not(:first-child) {
+    margin-left: 30px;
+}
+
+.workers__item {
+    background: $cards-background;
+    box-shadow: 0px 2px 1px 0px #00000033;
+    box-shadow: 0px 1px 1px 0px #00000024;
+    box-shadow: 0px 1px 3px 0px #0000001F;
+}
+
+.workers__meta {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.workers__name {
+    margin: 0 auto;
+    padding-bottom: 10px;
+
+    color: $title-text-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.workers__specialty {
+    margin: 0 auto;
+
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.social-profile {
+    padding-top: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-profile__item:not(:first-child) {
+    margin-left: 10px;
+}
+
+.social-profile__item {
+    width: 44px;
+    height: 44px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.social-profile__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: $worker-client-static-color;
+    transition: 
+    color $const-transition-duration $const-transition-timing-function,
+    background-color $const-transition-duration $const-transition-timing-function;
+        &:hover,
+        &:focus {
+            color: $socies-icon-change-color;
+            background-color: $accent-color;
+        }
+}
+
+.social-profile__logo {
+    fill: currentColor;
+}
