@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Студия</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
-    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
@@ -20,36 +19,72 @@
             <a class="logo header__logo" href="./index.html">
                 <span class="logo__part">Web</span>Studio
             </a>
-            <nav>
-            <ul class="site-nav">
-                <li class="site-nav__item">
-                    <a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a>
-                </li>
-                <li class="site-nav__item">
-                    <a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
-                <li class="site-nav__item">
-                    <a href="" class="site-nav__link">Контакты</a>
-                </li>
-            </ul>
-            </nav>
-            <ul class="contact-list">
-                <li class="contact-list__item">
-                    <a class="contact-list__link" href="mailto:info@devstudio.com">
-                        <svg class="contact-list__icon" width="22" height="16">
-                            <use href="./images/sprite.svg#icon-iconmail"></use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li class="contact-list__item">
-                    <a class="contact-list__link" href="tel:+380961111111">
-                        <svg class="contact-list__icon" width="14" height="20">
-                            <use href="./images/sprite.svg#icon-iconphone"></use>
-                        </svg>
-                        +38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
+            <button 
+            class="nav-button is-open" 
+            type="button" 
+            aria-expanded="false" 
+            data-menu-button>
+                <svg 
+                width="40" 
+                height="40" 
+                aria-label="Перемикач мобільного меню">
+                    <use class="nav-button__menu" href="./images/sprite.svg#icon-navmenu"></use>
+                    <use class="nav-button__close" href="./images/sprite.svg#icon-navclose"></use>
+                </svg>
+                    <script src="./js/mobile-menu.js"></script>
+                </button>
+            
+            <div class="site-menu">
+                <nav class="site-nav">
+                    <ul class="site-nav__list">
+                        <li class="site-nav__item">
+                            <a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
+                        <li class="site-nav__item">
+                            <a href="" class="site-nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <ul class="contact-list">
+                    <li class="contact-list__item">
+                        <a class="contact-list__link" href="mailto:info@devstudio.com">
+                            <svg class="contact-list__icon" width="22" height="16">
+                                <use href="./images/sprite.svg#icon-iconmail"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="contact-list__item">
+                        <a class="contact-list__link" href="tel:+380961111111">
+                            <svg class="contact-list__icon" width="14" height="20">
+                                <use href="./images/sprite.svg#icon-iconphone"></use>
+                            </svg>
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="social-link">
+                    <li class="social-link__item">
+                        <a href="#" class="social-link__link">Instagram</a>                       
+                    </li>
+
+                    <li class="social-link__item">
+                        <a href="#" class="social-link__link">Twitter</a>                        
+                    </li>
+
+                    <li class="social-link__item">
+                        <a href="#" class="social-link__link">Facebook</a>                        
+                    </li>
+
+                    <li class="social-link__item">
+                        <a href="#" class="social-link__link">LinkedIn</a>                        
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     <!-- НАПОВНЕННЯ СТОРІНКИ ОСНОВНИМ ТЕКСТОМ-->
@@ -111,24 +146,36 @@
                     </ul>
                 </div>
             </section>
-        <!-- Ілюстративні зображення -->
+        <!-- Особливості роботи (продукція) -->
         <section class="production">
             <div class="container">
                 <h2 class="production__title">Чем мы занимаемся</h2>
                 <ul class="production__list">
                     <li class="production__item">
                         <p class="production__text">Десктопные приложения</p>
-                        <img class="production__image" src="./images/boxone.jpg" alt="фото планшета с клавиатурой" width="370">
+                            <img class="production__image" 
+                                src="./images/feature-first.jpg" 
+                                alt="фото планшета с клавиатурой" 
+                                width="370"
+                            />
                     </li>
                 
                     <li class="production__item">
                         <p class="production__text">Мобильные приложения</p>
-                        <img class="production__image" src="./images/boxtwo.jpg" alt="фото планшета с клавиатурой" width="370">
+                            <img class="production__image" 
+                                src="./images/feature-second.jpg" 
+                                alt="фото планшета с клавиатурой" 
+                                width="370"
+                            />
                     </li>
                 
                     <li class="production__item">
                         <p class="production__text">Дизайнерские решения</p>
-                        <img class="production__image" src="./images/boxthree.jpg" alt="фото планшета с клавиатурой" width="370">
+                            <img class="production__image" 
+                                src="./images/feature-third.jpg" 
+                                alt="фото планшета с клавиатурой" 
+                                width="370"
+                            />
                     </li>
                 </ul>
             </div>
@@ -140,7 +187,12 @@
                 <h2 class="workers__title">Наша команда</h2>
                 <ul class="workers__list">
                     <li class="workers__item">
-                        <img src="./images/workerone.jpg" alt="изображение мужчины" width="270" height="260">
+                        <picture>
+                            <source srcset="./images/worker-first-450.jpg 1x,./images/worker-first-450@2x.jpg 2x" media="(max-width:767px)"/>
+                            <source srcset="./images/worker-first-354.jpg 1x,./images/worker-first-354@2x.jpg 2x" media="(max-width:1199px)"/>
+            
+                            <img class="worker__photo" src="./images/worker-first-270.jpg" alt="изображение мужчины">
+                        </picture>
                         <div class="workers__meta">
                             <h3 class="workers__name">Игорь Демьяненко</h3>
                             <p class="workers__specialty">Product Designer</p>
@@ -182,7 +234,12 @@
                     </li>
 
                     <li class="workers__item">
-                        <img src="./images/workertwo.jpg" alt="изображение женщины" width="270" height="260">
+                        <picture>
+                            <source srcset="./images/worker-second-450.jpg 1x, ./images/worker-second-450@2x.jpg 2x" media="(max-width:767px)" />
+                            <source srcset="./images/worker-second-354.jpg 1x, ./images/worker-second-354@2x.jpg 2x" media="(max-width:1199px)" />
+                            <source srcset="./images/worker-second-270.jpg 1x, ./images/worker-second-270@2x.jpg 2x" media="(min-width:1200px)" />
+                            <img src="./images/worker-second-450.jpg" alt="изображение жинки">
+                        </picture>
                         <div class="workers__meta">
                             <h3 class="workers__name">Ольга Репина</h3>
                             <p class="workers__specialty">Frontend Developer</p>
@@ -223,7 +280,12 @@
                     </li>
 
                     <li class="workers__item">
-                        <img src="./images/workerthree.jpg" alt="изображение мужчины" width="270" height="260">
+                        <picture>
+                            <source srcset="./images/worker-third-450.jpg 1x, ./images/worker-third-450@2x.jpg 2x" media="(max-width:767px)" />
+                            <source srcset="./images/worker-third-354.jpg 1x, ./images/worker-third-354@2x.jpg 2x" media="(max-width:1199px)" />
+                            <source srcset="./images/worker-third-270.jpg 1x, ./images/worker-third-270@2x.jpg 2x" media="(min-width:1200px)" />
+                            <img src="./images/worker-third-450.jpg" alt="изображение мужчины">
+                        </picture>
                         <div class="workers__meta">
                             <h3 class="workers__name">Николай Тарасов</h3>
                             <p class="workers__specialty">Marketing</p>
@@ -264,7 +326,12 @@
                     </li>
 
                     <li class="workers__item">
-                        <img src="./images/workerfour.jpg" alt="изображение мужчины" width="270" height="260">
+                        <picture>
+                            <source srcset="./images/worker-fourth-450.jpg 1x, ./images/worker-fourth-450@2x.jpg 2x" media="(max-width:767px)" />
+                            <source srcset="./images/worker-fourth-354.jpg 1x, ./images/worker-fourth-354@2x.jpg 2x" media="(max-width:1199px)" />
+                            <source srcset="./images/worker-fourth-270.jpg 1x, ./images/worker-fourth-270@2x.jpg 2x" media="(min-width:1200px)" />
+                            <img src="./images/worker-fourth-450.jpg" alt="изображение мужчины">
+                        </picture>
                         <div class="workers__meta">
                             <h3 class="workers__name">Михаил Ермаков</h3>
                             <p class="workers__specialty">UI Designer</p>
@@ -337,7 +404,7 @@
                 
                     <li class="client-section__item">
                         <a href="" class="client-section__link">
-                            <svg class="client-section__logo" width="140" height="85">
+                            <svg class="client-section__logo" width="106" height="60">
                                 <use href="./images/sprite.svg#icon-clientfour"></use>  
                             </svg>
                         </a>
@@ -353,7 +420,7 @@
                 
                     <li class="client-section__item">
                         <a href="" class="client-section__link">
-                            <svg class="client-section__logo" width="140" height="85">
+                            <svg class="client-section__logo" width="106" height="60">
                                 <use href="./images/sprite.svg#icon-clientsix"></use>  
                             </svg>
                         </a>
@@ -365,56 +432,61 @@
         <!-- ПІДВАЛ СТОРІНКИ -->
     <footer class="footer">
         <div class="footer-position container">
-            <div>
-                <a href="" class="logo footer__logo">
-                    <span class="logo__part">Web</span>Studio
-                </a>
-                <address class="footer-address">
-                    <ul class="footer-address__list">
-                        <li class="footer-address__item"><a href="" class="footer-address__location" target="_blank" rel="noopener noreferrer">г. Киев, пр-т
-                                Леси Украинки, 26І</a></li>
-                        <li class="footer-address__item"><a href="mailto:info@devstudio.com" class="footer-address__contact">info@devstudio.com</a>
+            <div class="footer-socandcontact">
+                <div class="footer-contacts">
+                    <a href="" class="logo footer__logo">
+                        <span class="logo__part">Web</span>Studio
+                    </a>
+                    <address class="footer-address">
+                        <ul class="footer-address__list">
+                            <li class="footer-address__item"><a href="" class="footer-address__location" target="_blank"
+                                    rel="noopener noreferrer">г. Киев, пр-т
+                                    Леси Украинки, 261</a></li>
+                            <li class="footer-address__item"><a href="mailto:info@devstudio.com"
+                                    class="footer-address__contact">info@devstudio.com</a>
+                            </li>
+                            <li class="footer-address__item"><a href="tel:+380961111111" class="footer-address__contact">+38 096 111 11
+                                    11</a></li>
+                        </ul>
+                    </address>
+                </div>
+                
+                <div class="footer-socials">
+                    <p class="footer-socials__title">ПРИСОЕДИНЯЙТЕСЬ</p>
+                    <ul class="footer-socials__list">
+                        <li class="footer-socials__item">
+                            <a class="footer-socials__link" href="">
+                                <svg class="footer-socials__logo" width="20" height="20">
+                                    <use href="./images/sprite.svg#icon-socinstagram"></use>
+                                </svg>
+                            </a>
                         </li>
-                        <li class="footer-address__item"><a href="tel:+380961111111" class="footer-address__contact">+38 096 111 11 11</a></li>
+                
+                        <li class="footer-socials__item">
+                            <a class="footer-socials__link" href="">
+                                <svg class="footer-socials__logo" width="20" height="20">
+                                    <use href="./images/sprite.svg#icon-soctwitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                
+                        <li class="footer-socials__item">
+                            <a class="footer-socials__link" href="">
+                                <svg class="footer-socials__logo" width="20" height="20">
+                                    <use href="./images/sprite.svg#icon-socfacebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                
+                        <li class="footer-socials__item">
+                            <a class="footer-socials__link" href="">
+                                <svg class="footer-socials__logo" width="20" height="20">
+                                    <use href="./images/sprite.svg#icon-soclinkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
-                </address>
-            </div>
-            
-            <div class="footer-socials">
-                <p class="footer-socials__title">ПРИСОЕДИНЯЙТЕСЬ</p>
-                <ul class="footer-socials__list">
-                    <li class="footer-socials__item">
-                        <a class="footer-socials__link" href="">
-                            <svg class="footer-socials__logo" width="20" height="20">
-                                <use href="./images/sprite.svg#icon-socinstagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                
-                    <li class="footer-socials__item">
-                        <a class="footer-socials__link" href="">
-                            <svg class="footer-socials__logo" width="20" height="20">
-                                <use href="./images/sprite.svg#icon-soctwitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                
-                    <li class="footer-socials__item">
-                        <a class="footer-socials__link" href="">
-                            <svg class="footer-socials__logo" width="20" height="20">
-                                <use href="./images/sprite.svg#icon-socfacebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                
-                    <li class="footer-socials__item">
-                        <a class="footer-socials__link" href="">
-                            <svg class="footer-socials__logo" width="20" height="20">
-                                <use href="./images/sprite.svg#icon-soclinkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </div>
 
             <div class="footer-subscription">
@@ -490,7 +562,7 @@
     </form>
     </div>
 </div>
-        <!-- Скріпт на модальне вікно -->
+        <!-- Скріпти -->
 <script src="./js/modal.js"></script>
 </body>
 </html>

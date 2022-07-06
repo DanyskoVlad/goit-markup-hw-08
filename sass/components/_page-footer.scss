@@ -10,8 +10,31 @@ address {
 }
 
 .footer-position {
-    display: flex;
-    align-items: baseline;
+    @media screen  and (min-width: $desktop){
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+.footer-socandcontact {
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: baseline;
+        margin-left: 76px;
+        margin-right: 89px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 0;
+        margin-right: 0;
+    }    
+}
+
+.footer-contacts {
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 60px;
+        text-align: center;
+    }
 }
 
 .footer-address {
@@ -38,7 +61,15 @@ address {
 
 // Підписки на соцмережі //
 .footer-socials {
-    margin-left: 70px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $tablet) {
+        margin-left: 165px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 70px;
+    }
 }
 
 .footer-socials__title {
@@ -48,10 +79,16 @@ address {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $footer-titles;
+
+    @media screen and (max-width: 1199px){
+        text-align: center;
+    }
 }
 
 .footer-socials__list {
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -87,7 +124,9 @@ address {
 // Підписка на телеграм //
 
 .footer-subscription {
-    margin-left: 93px;
+    @media screen and (min-width: $desktop) {
+        margin-left: 93px;
+    }
 }
 
 .footer-subscription__title {
@@ -98,20 +137,45 @@ address {
     text-transform: uppercase;
     color: $footer-titles;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
 }
 
 .subscription-form__meta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    @media screen and (min-width: $desktop){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .subscription-form__input {
     padding: 15px 16px;
-    margin-right: 12px;
-
-    width: 358px;
     height: 50px;
+
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 20px;
+        width: 450px
+    }
+
+    @media screen and (max-width: $mobile) {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-left: 166px;
+        margin-right: 152px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 12px;
+        margin-left: 0;
+        width: 358px;
+    }
 
     color: $input-footer;
     background-color: $footer-background;
@@ -121,6 +185,9 @@ address {
 }
 
 .subscription-form__button {
+    margin-left: auto;
+    margin-right: auto;
+
     display: flex;
     align-items: center;
     justify-content: center;
