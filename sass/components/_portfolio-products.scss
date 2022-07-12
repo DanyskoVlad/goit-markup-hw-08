@@ -1,17 +1,47 @@
 .section-portfolio {
-    margin: 0 auto;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @media screen and (max-width: 1199px) {
+        margin: 0 auto;
+        padding-top: 60px;
+        padding-bottom: 60px;
+}
+
+    @media screen and (min-width: $desktop) {
+        margin: 0 auto;
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+.filters {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+    }
 }
 
 .filter-list {
     display: flex;
-    margin: 0 auto 50px;
-    justify-content: center;
+    flex-wrap: nowrap;
+    margin: -4px;
+
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: $tablet) {
+        justify-content: center;
+    }
 }
 
-.filter-list__item:not(:first-child) {
-    margin-left: 8px;
+.filter-list__item {
+    margin: 4px;
 }
 
 .filter-list__button {
@@ -25,7 +55,7 @@
     color: $title-text-color;
     background-color: $filter-button-static-background;
     border: none;
-    cursor: pointer;
+    cursor: pointer; 
 
     transition: 
         color $const-transition-duration $const-transition-timing-function,

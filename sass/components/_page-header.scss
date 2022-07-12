@@ -3,13 +3,19 @@
     border-bottom: 1px solid #ECECEC;
 }
 
-// .header__position {
-//     @media screen and (min-width: $tablet) {
-//         display: flex;
-//         align-items: center;
-//     }   
-// }
+.header__position {
 
+    @media screen and (max-width: 767px) {
+        // position: absolute;
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+                            //  КНОПКА-ПЕРЕМИКАЧ МОБІЛЬНОГО МЕНЮ
 .nav-button {
     display: inline-flex;
     margin: 0px;
@@ -26,15 +32,26 @@
     display: none;
 }
 
-.nav-button.is-open .nav-button__close {
+.nav-button .is-open .nav-button__close {
     display: block;
 }
 
-.nav-button.is-open .nav-button__menu {
+.nav-button .is-open .nav-button__menu {
     display: none;
 }
 
 .site-menu {
+    @media screen and (max-width: 767px) {
+        // position: absolute;
+        // top: 100%;
+        // left: 0;
+        // width: 100px;
+
+        margin-left: 25px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
     @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
@@ -42,13 +59,13 @@
 }
 
 .site-nav__list {
+
     @media screen and (max-width: 767px) {
         margin-bottom: 302px;
     }
 
     @media screen and (min-width: $tablet) {
         display: flex;
-        margin-bottom: 0;
         margin-left: 93px;
     }
 }
@@ -140,6 +157,7 @@
     &:not(:first-child) {
         @media screen and (min-width: $desktop) {
             margin-left: 50px;
+            margin-bottom: 0;
         }
     }
 }
