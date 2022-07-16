@@ -70,14 +70,20 @@ a {
   border-bottom: 1px solid #ECECEC;
 }
 
-@media screen and (min-width: 768px) {
+.header__position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
   .header__position {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    position: relative;
   }
 }
 
@@ -100,23 +106,31 @@ a {
   display: none;
 }
 
-.nav-button .is-open .nav-button__close {
+.nav-button.is-open .nav-button__close {
   display: block;
 }
 
-.nav-button .is-open .nav-button__menu {
+.nav-button.is-open .nav-button__menu {
   display: none;
 }
 
 @media screen and (max-width: 767px) {
-  .site-menu {
-    margin-left: 25px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    background-color: red;
+    padding: 25px 48px;
   }
 }
+.mobile-menu.is-open {
+  display: block;
+}
 @media screen and (min-width: 768px) {
-  .site-menu {
+  .mobile-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -317,8 +331,8 @@ a {
 }
 
 .hero-section {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
   height: 400px;
@@ -784,13 +798,12 @@ a {
   .client-section__item {
     -ms-flex-preferred-size: calc((100% - 90px) / 3);
         flex-basis: calc((100% - 90px) / 3);
-    margin: 15px;
   }
 }
 @media screen and (min-width: 1200px) {
   .client-section__item {
-    width: calc((100% - 180px) / 6);
-    margin: 15px;
+    -ms-flex-preferred-size: calc((100% - 180px) / 6);
+        flex-basis: calc((100% - 180px) / 6);
   }
 }
 
@@ -1084,6 +1097,8 @@ address {
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 93px;
+  overflow-y: scroll;
 }
 
 .is-hidden {
@@ -1094,13 +1109,6 @@ address {
 
 .modal {
   display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
@@ -1108,6 +1116,23 @@ address {
           box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1411764706);
   -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1215686275);
           box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1215686275);
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 450px;
+    height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-close {
@@ -1152,11 +1177,20 @@ address {
   display: block;
   margin-bottom: 12px;
   text-align: center;
+  width: 370px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: #212121;
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__title {
+    margin-left: auto;
+    margin-right: auto;
+    width: 448px;
+    line-height: 1.15;
+  }
 }
 
 .form-group {
@@ -1209,7 +1243,7 @@ address {
 .form-group__comment {
   padding: 12px 16px;
   margin-bottom: 20px;
-  width: 448px;
+  max-width: 448px;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1245,15 +1279,6 @@ address {
   border: #2196F3;
 }
 
-.policy-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .agreement-block__logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1274,9 +1299,14 @@ address {
 .agreement-block__label {
   display: block;
   margin-left: 7px;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .agreement-block__label {
+    line-height: 1.71;
+  }
 }
 
 .agreement-block__link {

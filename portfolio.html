@@ -20,65 +20,66 @@
             <span class="logo__part">Web</span>Studio
         </a>
 
-        <button type="button" class="nav-button is-open" aria-expanded="false" data-menu-button>
+        <button type="button" class="nav-button" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
             <svg width="40" height="40" aria-label="Перемикач мобільного меню">
                 <use class="nav-button__close" href="./images/sprite.svg#icon-navclose"></use>
                 <use class="nav-button__menu" href="./images/sprite.svg#icon-navmenu"></use>
             </svg>
-            <script src="./js/mobile-menu.js"></script>
         </button>
+        <div class="mobile-menu" id="mobile-menu" data-menu>
+            <nav class="site-nav">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item">
+                        <a href="./index.html" class="site-nav__link">Студия</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="./portfolio.html" class="site-nav__link site-nav__link--current">Портфолио</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a href="" class="site-nav__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
 
-        <nav class="site-nav">
-            <ul class="site-nav__list">
-                <li class="site-nav__item">
-                    <a href="./index.html" class="site-nav__link">Студия</a>
+            <ul class="contact-list">
+                <li class="contact-list__item">
+                    <a class="contact-list__link" href="mailto:info@devstudio.com">
+                        <svg class="contact-list__icon" width="22" height="16">
+                            <use href="./images/sprite.svg#icon-iconmail"></use>
+                        </svg>
+                        info@devstudio.com
+                    </a>
                 </li>
-                <li class="site-nav__item">
-                    <a href="./portfolio.html" class="site-nav__link site-nav__link--current">Портфолио</a>
-                </li>
-                <li class="site-nav__item">
-                    <a href="" class="site-nav__link">Контакты</a>
+                <li class="contact-list__item">
+                    <a class="contact-list__link" href="tel:+380961111111">
+                        <svg class="contact-list__icon" width="14" height="20">
+                            <use href="./images/sprite.svg#icon-iconphone"></use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
                 </li>
             </ul>
-        </nav>
 
-        <ul class="contact-list">
-            <li class="contact-list__item">
-                <a class="contact-list__link" href="mailto:info@devstudio.com">
-                    <svg class="contact-list__icon" width="22" height="16">
-                        <use href="./images/sprite.svg#icon-iconmail"></use>
-                    </svg>
-                    info@devstudio.com
-                </a>
-            </li>
-            <li class="contact-list__item">
-                <a class="contact-list__link" href="tel:+380961111111">
-                    <svg class="contact-list__icon" width="14" height="20">
-                        <use href="./images/sprite.svg#icon-iconphone"></use>
-                    </svg>
-                    +38 096 111 11 11
-                </a>
-            </li>
-        </ul>
+            <ul class="social-link">
+                <li class="social-link__item">
+                    <a href="#" class="social-link__link">Instagram</a>
+                </li>
 
-        <ul class="social-link">
-            <li class="social-link__item">
-                <a href="#" class="social-link__link">Instagram</a>
-            </li>
+                <li class="social-link__item">
+                    <a href="#" class="social-link__link">Twitter</a>
+                </li>
 
-            <li class="social-link__item">
-                <a href="#" class="social-link__link">Twitter</a>
-            </li>
+                <li class="social-link__item">
+                    <a href="#" class="social-link__link">Facebook</a>
+                </li>
 
-            <li class="social-link__item">
-                <a href="#" class="social-link__link">Facebook</a>
-            </li>
-
-            <li class="social-link__item">
-                <a href="#" class="social-link__link">LinkedIn</a>
-            </li>
-        </ul>
+                <li class="social-link__item">
+                    <a href="#" class="social-link__link">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
 </header>
 
     <main>
@@ -104,7 +105,21 @@
                                 позволит посетителю
                                 получить
                                 исчерпывающие сведения о компании или частном лице.</p>
-                            <img src="./images/exampleone.jpg" alt="ноутбук из изображением" width="370" height="294">
+                            <picture>
+                                <source srcset="
+                                ./images/portfolio-first-450.jpg 1x,
+                                ./images/portfolio-first-450@2x.jpg 2x" type="image/jpeg" media="(max-width:767px)" />
+                            
+                                <source srcset="
+                                ./images/portfolio-first-354.jpg 1x,
+                                ./images/portfolio-first-354@2x.jpg 2x" type="image/jpeg" media="(max-width:1199px)" />
+                            
+                                <source srcset="
+                                ./images/portfolio-first-370.jpg 1x,
+                                ./images/portfolio-first-370@2x.jpg 2x" type="image/jpeg" media="(min-width:1200px)" />
+                            
+                                <img class="worker__photo" src="./images/portfolio-first-370.jpg" alt="постер ноутбук">
+                            </picture>
                         </div>
 
                         <div class="poster-list__meta">
@@ -116,7 +131,21 @@
             
                 <li class="poster-list__item">
                     <a href="">
-                        <img src="./images/exampletwo.jpg" alt="баскетбол" width="370" height="294">
+                        <picture>
+                            <source srcset="
+                            ./images/portfolio-second-450.jpg 1x,
+                            ./images/portfolio-second-450@2x.jpg 2x" type="image/jpeg" media="(max-width:767px)" />
+                        
+                            <source srcset="
+                            ./images/portfolio-second-354.jpg 1x,
+                            ./images/portfolio-second-354@2x.jpg 2x" type="image/jpeg" media="(max-width:1199px)" />
+                        
+                            <source srcset="
+                            ./images/portfolio-second-370.jpg 1x,
+                            ./images/portfolio-second-370@2x.jpg 2x" type="image/jpeg" media="(min-width:1200px)" />
+                        
+                            <img class="worker__photo" src="./images/portfolio-second-370.jpg" alt="постер баскетбол">
+                        </picture>
                         <div class="poster-list__meta">
                             <h2 class="poster-list__name">Постер New Orlean vs Golden Star</h2>
                             <p class="poster-list__category">Дизайн</p>
@@ -126,7 +155,21 @@
             
                 <li class="poster-list__item">
                     <a href="">
-                        <img src="./images/examplethree.jpg" alt="постер с рыбой" width="370" height="294">
+                        <picture>
+                            <source srcset="
+                            ./images/portfolio-third-450.jpg 1x,
+                            ./images/portfolio-third-450@2x.jpg 2x" type="image/jpeg" media="(max-width:767px)" />
+                        
+                            <source srcset="
+                            ./images/portfolio-third-354.jpg 1x,
+                            ./images/portfolio-third-354@2x.jpg 2x" type="image/jpeg" media="(max-width:1199px)" />
+                        
+                            <source srcset="
+                            ./images/portfolio-third-370.jpg 1x,
+                            ./images/portfolio-third-370@2x.jpg 2x" type="image/jpeg" media="(min-width:1200px)" />
+                        
+                            <img class="worker__photo" src="./images/portfolio-third-370.jpg" alt="постер рибної лавки">
+                        </picture>
                         <div class="poster-list__meta">
                             <h2 class="poster-list__name">Ресторан Seafood</h2>
                             <p class="poster-list__category">Приложение</p>
@@ -136,7 +179,21 @@
             
                 <li class="poster-list__item">
                     <a href="">
-                        <img src="./images/examplefour.jpg" alt="изображение наушников" width="370" height="294">
+                        <picture>
+                            <source srcset="
+                            ./images/portfolio-fourth-450.jpg 1x,
+                            ./images/portfolio-fourth-450@2x.jpg 2x" type="image/jpeg" media="(max-width:767px)" />
+                        
+                            <source srcset="
+                            ./images/portfolio-fourth-354.jpg 1x,
+                            ./images/portfolio-fourth-354@2x.jpg 2x" type="image/jpeg" media="(max-width:1199px)" />
+                        
+                            <source srcset="
+                            ./images/portfolio-fourth-370.jpg 1x,
+                            ./images/portfolio-fourth-370@2x.jpg 2x" type="image/jpeg" media="(min-width:1200px)" />
+                        
+                            <img class="worker__photo" src="./images/portfolio-fourth-370.jpg" alt="постер музикальної студії">
+                        </picture>
                         <div class="poster-list__meta">
                             <h2 class="poster-list__name">Проект Prime</h2>
                             <p class="poster-list__category">Маркетинг</p>
@@ -146,7 +203,21 @@
             
                 <li class="poster-list__item">
                     <a href="">
-                        <img src="./images/examplefive.jpg" alt="ноутбук из изображением" width="370" height="294">
+                        <picture>
+                            <source srcset="
+                            ./images/portfolio-fifth-450.jpg 1x,
+                            ./images/portfolio-fifth-450@2x.jpg 2x" type="image/jpeg" media="(max-width:767px)" />
+                        
+                            <source srcset="
+                            ./images/portfolio-fifth-354.jpg 1x,
+                            ./images/portfolio-fifth-354@2x.jpg 2x" type="image/jpeg" media="(max-width:1199px)" />
+                        
+                            <source srcset="
+                            ./images/portfolio-fifth-370.jpg 1x,
+                            ./images/portfolio-fifth-370@2x.jpg 2x" type="image/jpeg" media="(min-width:1200px)" />
+                        
+                            <img class="worker__photo" src="./images/portfolio-fifth-370.jpg" alt="постер служби поштової доставки">
+                        </picture>
                         <div class="poster-list__meta">
                             <h2 class="poster-list__name">Проект Boxes</h2>
                             <p class="poster-list__category">Приложение</p>
@@ -156,7 +227,21 @@
             
                 <li class="poster-list__item">
                     <a href="">
-                        <img src="./images/examplesix.jpg" alt="ноутбук из изображением" width="370" height="294">
+                        <picture>
+                            <source srcset="
+                            ./images/portfolio-sixth-450.jpg 1x,
+                            ./images/portfolio-sixth-450@2x.jpg 2x" type="image/jpeg" media="(max-width:767px)" />
+                        
+                            <source srcset="
+                            ./images/portfolio-sixth-354.jpg 1x,
+                            ./images/portfolio-sixth-354@2x.jpg 2x" type="image/jpeg" media="(max-width:1199px)" />
+                        
+                            <source srcset="
+                            ./images/portfolio-sixth-370.jpg 1x,
+                            ./images/portfolio-sixth-370@2x.jpg 2x" type="image/jpeg" media="(min-width:1200px)" />
+                        
+                            <img class="worker__photo" src="./images/portfolio-sixth-370.jpg" alt="постер веб-сайту">
+                        </picture>
                         <div class="poster-list__meta">
                             <h2 class="poster-list__name">Inspiration has no Borders</h2>
                             <p class="poster-list__category">Веб-сайт</p>
@@ -166,7 +251,21 @@
             
                 <li class="poster-list__item">
                     <a href="">
-                        <img src="./images/exampleseven.jpg" alt="Страница книги" width="370" height="294">
+                    <picture>
+                        <source srcset="
+                        ./images/portfolio-seventh-450.jpg 1x,
+                        ./images/portfolio-seventh-450@2x.jpg 2x" type="image/jpeg" media="(max-width:767px)" />
+                    
+                        <source srcset="
+                        ./images/portfolio-seventh-354.jpg 1x,
+                        ./images/portfolio-seventh-354@2x.jpg 2x" type="image/jpeg" media="(max-width:1199px)" />
+                    
+                        <source srcset="
+                        ./images/portfolio-seventh-370.jpg 1x,
+                        ./images/portfolio-seventh-370@2x.jpg 2x" type="image/jpeg" media="(min-width:1200px)" />
+                    
+                        <img class="worker__photo" src="./images/portfolio-seventh-370.jpg" alt="постер видавництва">
+                    </picture>
                         <div class="poster-list__meta">
                             <h2 class="poster-list__name">Издание Limited Edition</h2>
                             <p class="poster-list__category">Дизайн</p>
@@ -176,7 +275,21 @@
             
                 <li class="poster-list__item">
                     <a href="">
-                        <img src="./images/exampleeight.jpg" alt="Брелок" width="370" height="294">
+                        <picture>
+                            <source srcset="
+                            ./images/portfolio-eighth-450.jpg 1x,
+                            ./images/portfolio-eighth-450@2x.jpg 2x" type="image/jpeg" media="(max-width:767px)" />
+                        
+                            <source srcset="
+                            ./images/portfolio-eighth-354.jpg 1x,
+                            ./images/portfolio-eighth-354@2x.jpg 2x" type="image/jpeg" media="(max-width:1199px)" />
+                        
+                            <source srcset="
+                            ./images/portfolio-eighth-370.jpg 1x,
+                            ./images/portfolio-eighth-370@2x.jpg 2x" type="image/jpeg" media="(min-width:1200px)" />
+                        
+                            <img class="worker__photo" src="./images/portfolio-eighth-370.jpg" alt="постер лабораторії">
+                        </picture>
                         <div class="poster-list__meta">
                             <h2 class="poster-list__name">Проект LAB</h2>
                             <p class="poster-list__category">Маркетинг</p>
@@ -186,7 +299,21 @@
             
                 <li class="poster-list__item">
                     <a href="">
-                        <img src="./images/examplenine.jpg" alt="ноутбук із зображенням" width="370" height="294">
+                    <picture>
+                        <source srcset="
+                        ./images/portfolio-ninth-450.jpg 1x,
+                        ./images/portfolio-ninth-450@2x.jpg 2x" type="image/jpeg" media="(max-width:767px)" />
+                    
+                        <source srcset="
+                        ./images/portfolio-ninth-354.jpg 1x,
+                        ./images/portfolio-ninth-354@2x.jpg 2x" type="image/jpeg" media="(max-width:1199px)" />
+                    
+                        <source srcset="
+                        ./images/portfolio-ninth-370.jpg 1x,
+                        ./images/portfolio-ninth-370@2x.jpg 2x" type="image/jpeg" media="(min-width:1200px)" />
+                    
+                        <img class="worker__photo" src="./images/portfolio-ninth-370.jpg" alt="постер стартапу">
+                    </picture>
                         <div class="poster-list__meta">
                             <h2 class="poster-list__name">Growing Business</h2>
                             <p class="poster-list__category">Приложение</p>
@@ -202,59 +329,62 @@
     <!-- ПІДВАЛ СТОРІНКИ -->
     <footer class="footer">
         <div class="footer-position container">
-            <div>
-                <a href="" class="logo footer__logo">
-                    <span class="logo__part">Web</span>Studio
-                </a>
-                <address class="footer-address">
-                    <ul class="footer-address__list">
-                        <li class="footer-address__item"><a href="" class="footer-address__location" target="_blank"
-                                rel="noopener noreferrer">г. Киев, пр-т
-                                Леси Украинки, 26І</a></li>
-                        <li class="footer-address__item"><a href="mailto:info@devstudio.com"
-                                class="footer-address__contact">info@devstudio.com</a>
+            <div class="footer-socandcontact">
+                <div class="footer-contacts">
+                    <a href="" class="logo footer__logo">
+                        <span class="logo__part">Web</span>Studio
+                    </a>
+                    <address class="footer-address">
+                        <ul class="footer-address__list">
+                            <li class="footer-address__item"><a href="" class="footer-address__location" target="_blank"
+                                    rel="noopener noreferrer">г. Киев, пр-т
+                                    Леси Украинки, 261</a></li>
+                            <li class="footer-address__item"><a href="mailto:info@devstudio.com"
+                                    class="footer-address__contact">info@devstudio.com</a>
+                            </li>
+                            <li class="footer-address__item"><a href="tel:+380961111111" class="footer-address__contact">+38
+                                    096 111 11
+                                    11</a></li>
+                        </ul>
+                    </address>
+                </div>
+    
+                <div class="footer-socials">
+                    <p class="footer-socials__title">ПРИСОЕДИНЯЙТЕСЬ</p>
+                    <ul class="footer-socials__list">
+                        <li class="footer-socials__item">
+                            <a class="footer-socials__link" href="">
+                                <svg class="footer-socials__logo" width="20" height="20">
+                                    <use href="./images/sprite.svg#icon-socinstagram"></use>
+                                </svg>
+                            </a>
                         </li>
-                        <li class="footer-address__item"><a href="tel:+380961111111" class="footer-address__contact">+38 096
-                                111 11 11</a></li>
+    
+                        <li class="footer-socials__item">
+                            <a class="footer-socials__link" href="">
+                                <svg class="footer-socials__logo" width="20" height="20">
+                                    <use href="./images/sprite.svg#icon-soctwitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+    
+                        <li class="footer-socials__item">
+                            <a class="footer-socials__link" href="">
+                                <svg class="footer-socials__logo" width="20" height="20">
+                                    <use href="./images/sprite.svg#icon-socfacebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+    
+                        <li class="footer-socials__item">
+                            <a class="footer-socials__link" href="">
+                                <svg class="footer-socials__logo" width="20" height="20">
+                                    <use href="./images/sprite.svg#icon-soclinkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
-                </address>
-            </div>
-    
-            <div class="footer-socials">
-                <p class="footer-socials__title">ПРИСОЕДИНЯЙТЕСЬ</p>
-                <ul class="footer-socials__list">
-                    <li class="footer-socials__item">
-                        <a class="footer-socials__link" href="">
-                            <svg class="footer-socials__logo" width="20" height="20">
-                                <use href="./images/sprite.svg#icon-socinstagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-    
-                    <li class="footer-socials__item">
-                        <a class="footer-socials__link" href="">
-                            <svg class="footer-socials__logo" width="20" height="20">
-                                <use href="./images/sprite.svg#icon-soctwitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-    
-                    <li class="footer-socials__item">
-                        <a class="footer-socials__link" href="">
-                            <svg class="footer-socials__logo" width="20" height="20">
-                                <use href="./images/sprite.svg#icon-socfacebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-    
-                    <li class="footer-socials__item">
-                        <a class="footer-socials__link" href="">
-                            <svg class="footer-socials__logo" width="20" height="20">
-                                <use href="./images/sprite.svg#icon-soclinkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </div>
     
             <div class="footer-subscription">
