@@ -355,6 +355,12 @@ a {
   color: #2196F3;
 }
 
+.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
 @media screen and (max-width: 1199px) {
   .section-portfolio {
     margin: 0 auto;
