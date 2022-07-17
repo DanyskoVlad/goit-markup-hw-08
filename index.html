@@ -16,27 +16,10 @@
     <!-- ШАПКА СТОРІНКИ -->
     <header class="header">
         <div class="header__position container">
-            <a class="logo header__logo" href="./index.html">
+            <a class="logo header__logo" data-logo href="./index.html">
                 <span class="logo__part">Web</span>Studio
             </a>
-            
-            <button type="button"
-            class="nav-button"
-            aria-expanded="false" 
-            aria-controls="mobile-menu"
-            data-menu-button>
-                <svg 
-                width="40" 
-                height="40" 
-                aria-label="Перемикач мобільного меню"
-                >
-                    <use class="nav-button__close" href="./images/sprite.svg#icon-navclose"></use>
-                    <use class="nav-button__menu" href="./images/sprite.svg#icon-navmenu"></use>
-                </svg>
-            </button>
-            <div class="mobile-menu"
-            id="mobile-menu" 
-            data-menu>
+            <div class="header-menu">
                 <nav class="site-nav">
                     <ul class="site-nav__list">
                         <li class="site-nav__item">
@@ -69,27 +52,73 @@
                         </a>
                     </li>
                 </ul>
+            </div>
                 
-                <ul class="social-link">
-                    <li class="social-link__item">
-                        <a href="#" class="social-link__link">Instagram</a>
-                    </li>
-                
-                    <li class="social-link__item">
-                        <a href="#" class="social-link__link">Twitter</a>
-                    </li>
-                
-                    <li class="social-link__item">
-                        <a href="#" class="social-link__link">Facebook</a>
-                    </li>
-                
-                    <li class="social-link__item">
-                        <a href="#" class="social-link__link">LinkedIn</a>
-                    </li>
-                </ul>
+            <button type="button" class="menu-button__burger">
+                <svg width="40" height="40">
+                    <use href="./images/sprite.svg#icon-navmenu"></use>
+                </svg>
+            </button>
+        </div>
+
+        <div class="menu-mobile is-hidden">
+            <div class="container">
+                <div class="menu-top">
+                    <button type="button" class="menu-button__close">
+                        <svg width="40" height="40">
+                            <use href="./images/sprite.svg#icon-navclose"></use>
+                        </svg>
+                    </button>
+                    
+                    <nav class="menu-mobile__site-nav">
+                        <ul class="menu-mobile__nav-list">
+                            <li class="menu-mobile__nav-item">
+                                <a href="./index.html" class="menu-mobile__nav-link site-nav__link--current">Студия</a>
+                            </li>
+                            <li class="menu-mobile__nav-item">
+                                <a href="./portfolio.html" class="menu-mobile__nav-link">Портфолио</a>
+                            </li>
+                            <li class="menu-mobile__nav-item">
+                                <a href="" class="menu-mobile__nav-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+               
+                <div class="menu-bottom">
+                    <ul class="menu-mobile__contact">
+                        <li class="menu-mobile__contact-item">
+                            <a class="menu-mobile__contact-link" href="mailto:info@devstudio.com">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="menu-mobile__contact-item">
+                            <a class="menu-mobile__contact-link" href="tel:+380961111111">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <ul class="menu-mobile__social">
+                        <li class="menu-mobile__social-item">
+                            <a href="#" class="menu-mobile__social-link">Instagram</a>
+                        </li>
+                    
+                        <li class="menu-mobile__social-item">
+                            <a href="#" class="menu-mobile__social-link">Twitter</a>
+                        </li>
+                    
+                        <li class="menu-mobile__social-item">
+                            <a href="#" class="menu-mobile__social-link">Facebook</a>
+                        </li>
+                    
+                        <li class="menu-mobile__social-item">
+                            <a href="#" class="menu-mobile__social-link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <script src="./js/mobile-menu.js"></script>
     </header>
     <!-- НАПОВНЕННЯ СТОРІНКИ ОСНОВНИМ ТЕКСТОМ-->
     <main>
@@ -646,7 +675,8 @@
     </form>
     </div>
 </div>
-        <!-- Скріпти -->
+        <!-- Скрипти -->
 <script src="./js/modal.js"></script>
+<script src="./js/menu.js"></script>
 </body>
 </html>
