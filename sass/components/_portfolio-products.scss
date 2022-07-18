@@ -181,6 +181,10 @@
     transition: opacity $const-transition-duration $const-transition-timing-function;
 }
 
+.portfolio__photo {
+    width: 100%;
+}
+
 .poster-list__meta {
     padding: 20px 24px;
 }
