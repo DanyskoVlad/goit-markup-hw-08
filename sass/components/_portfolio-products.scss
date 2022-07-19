@@ -137,10 +137,6 @@
     transition: box-shadow $const-transition-duration $const-transition-timing-function;
 }
 
-// .poster-list__link {
-    
-// }
-
 .poster-list__item:hover .poster-list__description {
     opacity: 1;
 }
@@ -181,20 +177,25 @@
 
 .poster-list__description {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    
+        width: 322px;
+        height: 168px;
+    
+        font-size: 18px;
+        line-height: 1.56;
+        letter-spacing: 0.03em;
+        color: $post-animation-text-color;
+        opacity: 0;
+    
+        transition: opacity $const-transition-duration $const-transition-timing-function;
+}
 
-    width: 322px;
-    height: 168px;
-
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-    color: $post-animation-text-color;
-    opacity: 0;
-
-    transition: opacity $const-transition-duration $const-transition-timing-function;
+.poster-list__item:hover .poster-list__animation, 
+.poster-list__item:focus .poster-list__animation {
+        transform: translateY(0);
 }
 
 .portfolio__photo {

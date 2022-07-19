@@ -1,4 +1,4 @@
-// Основа модального вікна //
+    // Основа модального вікна //
 
 .backdrop {
     position: fixed;
@@ -20,22 +20,26 @@
 }
 
 .modal {
-    display: inline-block;
+    // display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    
     background-color: $modal-background-color;
     box-shadow: 0px 2px 1px 0px #00000033;
     box-shadow: 0px 1px 1px 0px #00000024;
     box-shadow: 0px 1px 3px 0px #0000001F;
 
-    @media screen and (min-width: $mobile) {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        width: 450px;
-        height: 609px;
+    @media screen and (max-width: 479px) {
+        width: calc(100% - 30px);
     }
-
+    
+    @media screen and (min-width: $mobile) {
+        width: 450px;
+    }
+    
     @media screen and (min-width: $desktop) {
         width: 528px;
         height: 581px;
@@ -43,12 +47,13 @@
 }
 
 .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     display: flex;
     margin-left: auto;
     justify-content: center;
     align-items: center;
-    margin-right: 8px;
-    margin-top: 8px;
     width: 30px;
     height: 30px;
     background-color: $modal-background-color;
@@ -71,7 +76,9 @@
 
 .form-group input {
     margin: 0;
-    padding: 14px 42px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 42px;
     padding-right: 15px;
 }
 
@@ -88,8 +95,6 @@
     color: $title-text-color;
 
     @media screen and (min-width: $desktop) {
-        margin-left: auto;
-        margin-right: auto;
         width: 448px;
         line-height: 1.15;
     }
@@ -101,8 +106,6 @@
     flex-direction: column;
     margin-bottom: 10px;
     width: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
 }
 
 .form-group__lable {
@@ -133,7 +136,7 @@
 .form-group__icon {
     position: absolute;
     top: 33px;
-    left: 55px;
+    left: 15px;
     transition: fill $const-transition-duration $const-transition-timing-function;
 }
 
@@ -155,10 +158,13 @@
 //Блок чекбокса//
 
 .agreement-block {
+    margin-bottom: 30px;
+}
+
+.agreement-block__label {
     display: flex;
     align-items: center;
     justify-content: left;
-    margin: 0;
 }
 
 .agreement-block__checkbox {
@@ -175,9 +181,9 @@
     }
 }
 
+
 .agreement-block__logo {
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 16px;
     height: 15px;
@@ -186,7 +192,7 @@
     transition: background-color $const-transition-duration $const-transition-timing-function;
 }
 
-.agreement-block__label {
+.agreement-block__text {
     display: block;
     margin-left: 7px;
     font-size: 12px;
@@ -204,9 +210,14 @@
     cursor: pointer;
 }
 
+.agreement-block__checkbox:focus + .agreement-block__logo {
+    border: 2px solid var($accent-color);
+}
+
 .form-button {
     display: block;
-    margin: 30px auto 40px;
+    margin-left: auto;
+    margin-right: auto;
     width: 200px;
     height: 50px;
 
