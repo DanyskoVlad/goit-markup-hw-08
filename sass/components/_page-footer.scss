@@ -20,8 +20,7 @@ address {
     @media screen and (min-width: $tablet) {
         display: flex;
         align-items: baseline;
-        margin-left: 76px;
-        margin-right: 89px;
+        justify-content: space-around;
     }
 
     @media screen and (min-width: $desktop) {
@@ -31,8 +30,11 @@ address {
 }
 
 .footer-contacts {
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 767px) {
         margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: 1199px) {
         text-align: center;
     }
 }
@@ -57,16 +59,15 @@ address {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+
+    &:hover, 
+    &:focus {
+        color: $accent-color;
+    }
 }
 
 // Підписки на соцмережі //
 .footer-socials {
-    margin-bottom: 60px;
-
-    @media screen and (min-width: $tablet) {
-        margin-left: 165px;
-    }
-
     @media screen and (min-width: $desktop) {
         margin-left: 70px;
     }
@@ -124,8 +125,12 @@ address {
 // Підписка на телеграм //
 
 .footer-subscription {
+    @media screen and (max-width: 1199px) {
+        margin-top: 60px;
+    }
+
     @media screen and (min-width: $desktop) {
-        margin-left: 93px;
+        margin-left: auto;
     }
 }
 
@@ -157,9 +162,9 @@ address {
     height: 50px;
 
     @media screen and (max-width: 1199px) {
-            margin-bottom: 20px;
-            width: 450px
-        }
+        margin-bottom: 20px;
+        width: 450px
+    }
 
     @media screen and (max-width: $mobile) {
         margin-bottom: 20px;
@@ -175,7 +180,6 @@ address {
 
     @media screen and (min-width: $desktop) {
         margin-right: 12px;
-        margin-left: 0;
         width: 358px;
     }
 

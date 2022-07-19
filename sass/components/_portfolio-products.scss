@@ -94,6 +94,8 @@
 }
 
 .poster-list__item {
+    display: flex;
+    height: auto;
 
     @media screen and (max-width: 767px) {
         &:not(:last-child) {
@@ -123,8 +125,6 @@
     }
     
     border: 1px solid #EEEEEE;
-    background-color: $cards-background;
-    transition: box-shadow $const-transition-duration $const-transition-timing-function;
 
     &:hover,
     &:focus {
@@ -132,9 +132,20 @@
             0px 4px 4px rgba(0, 0, 0, 0.06),
             1px 4px 6px rgba(0, 0, 0, 0.16);
     }
+
+    background-color: $cards-background;
+    transition: box-shadow $const-transition-duration $const-transition-timing-function;
 }
 
+// .poster-list__link {
+    
+// }
+
 .poster-list__item:hover .poster-list__description {
+    opacity: 1;
+}
+
+.poster-list__item:focus .poster-list__description {
     opacity: 1;
 }
 
@@ -144,6 +155,11 @@
 }
 
 .poster-list__item:hover ::before {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.poster-list__item:focus ::before {
     opacity: 1;
     transform: translateY(0);
 }
@@ -186,11 +202,12 @@
 }
 
 .poster-list__meta {
+    flex-grow: 1;
     padding: 20px 24px;
 }
 
 .poster-list__name {
-    min-width: 322px;
+    min-width: 306px;
     margin: 0px auto;
     padding-bottom: 4px;
 
